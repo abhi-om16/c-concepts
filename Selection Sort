@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() 
+{
+    int i,j,n;
+    cout << "Enter size of array: ";
+    cin >> n;
+    vector<int> a(n);
+    cout << "Enter elements of array: ";
+    for(i=0;i<n;i++){
+        cin >> a[i];
+    }
+    cout << "Array before sorting: \n";
+    for(i=0;i<n;i++){
+        cout << a[i] << " ";
+    }
+    //selection sorting
+    for(i=0;i<n-1;i++){
+        int min = i;
+        for(j=i+1;j<n;j++){
+            if(a[j]<a[min]){
+                min = j;
+            }
+        }
+        int temp = a[i];
+        a[i] = a[min];
+        a[min] = temp;
+    }
+    cout << "\nArray after sorting \n";
+    for(i=0;i<n;i++){
+        cout << a[i] << " ";
+    }
+    
+    return 0;
+}
