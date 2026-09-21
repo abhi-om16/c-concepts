@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int i,j,vowel = 0;
+    string w;
+    cout << "Enter a string: ";
+    getline(cin,w);
+    int n = w.size();
+    for(i=0;i<n;i++){
+        if(w[i] == 'A' || w[i] == 'a'){
+            vowel += 1;
+        }
+        if(w[i] == 'E' || w[i] == 'e'){
+            vowel += 1;
+        }
+        if(w[i] == 'I' || w[i] == 'i'){
+            vowel += 1;
+        }
+        if(w[i] == 'O' || w[i] == 'o'){
+            vowel += 1;
+        }
+        if(w[i] == 'U' || w[i] == 'u'){
+            vowel += 1;
+        }
+    }
+    cout << "Total vowel: " << vowel;
+    return 0;
+}
