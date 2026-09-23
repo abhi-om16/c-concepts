@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int i,n;
+    printf("Enter size of element: ");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter elements: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int target,pos;
+    printf("Enter target: ");
+    scanf("%d",&target);
+    int found = 0;
+    for(i=0;i<n;i++){
+        if(a[i] == target){
+            found = 1;
+            pos = i;
+            break;
+        }
+    }
+     if(found){
+        printf("Element found at position: %d",i+1);
+    }
+    else{
+        printf("Element doesn't exist");
+    }
+    return 0;
+}
